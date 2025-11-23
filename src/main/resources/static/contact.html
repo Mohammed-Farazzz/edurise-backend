@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - EduRise</title>
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    .contact-hero {
+      background-color: #9a1c4d;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-hero-text {
+      max-width: 600px;
+    }
+
+    .contact-hero h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact-hero p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .contact-hero-img img {
+      max-width: 350px;
+    }
+
+    .contact-tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 60px;
+      font-weight: 500;
+    }
+
+    .contact-tabs div {
+      padding-bottom: 8px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: gray;
+    }
+
+    .contact-tabs .active {
+      border-bottom: 2px solid #a60059;
+      color: #a60059;
+    }
+
+    .contact-details {
+      text-align: center;
+      padding: 30px 60px;
+    }
+
+    .contact-details .info {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .info p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .info a {
+      color: #a60059;
+      text-decoration: none;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+
+    .info i {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://as2.ftcdn.net/v2/jpg/01/99/05/35/1000_F_199053513_reNOz8CqNJx2zBxbhOUCTDpjcl3tb7CI.jpg" alt="EduRise Logo" style="height: 35px; vertical-align: middle;">
+        <span style="font-weight: bold; font-size: 20px; margin-left: 10px; color: #a60059;">EduRise</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="code-of-practice.html">Code of Practice</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+      <div class="login-dropdown">
+        <button onclick="toggleDropdown()">Login ⯆</button>
+        <div class="dropdown-content" id="dropdown">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div class="contact-hero-text">
+      <h2>Contact us</h2>
+      <p>We are here to help you and answer any questions you may have. Here is how to reach us!</p>
+    </div>
+    <div class="contact-hero-img">
+      <img src="C:\Users\HP\OneDrive\Pictures\Screenshots\Screenshot 2025-07-17 004952.png" alt="Contact Us Illustration">
+    </div>
+  </section>
+
+<!-- Tabs -->
+<div class="contact-tabs" id="contact-tabs">
+  <div class="tab active" onclick="showTab('india')">INDIA</div>
+  <div class="tab" onclick="showTab('us')">US</div>
+  <div class="tab" onclick="showTab('singapore')">SINGAPORE</div>
+</div>
+
+<!-- Info -->
+<div class="contact-details">
+  <!-- India Info -->
+  <div class="info" id="india">
+    <p><strong>Milaap Social Ventures India Pvt. Ltd.</strong></p>
+    <p>Nextcoworks JP Nagar - Coworking Space, JP Nagar Alankar Plaza, BK Circle, Nayak Layout, 8th Phase, J. P. Nagar, Bangalore, Karnataka, India 560078</p>
+    <p><strong>Email:</strong> <a href="mailto:feedback@milaap.org">feedback@milaap.org</a></p>
+    <p><strong>Phone:</strong> <a href="tel:919916174848">+91 99161 74848</a></p>
+  </div>
+
+  <!-- US Info -->
+  <div class="info" id="us" style="display: none;">
+    <p><strong>Milaap USA Office</strong></p>
+    <p>795 Folsom Street, 1st Floor, San Francisco, CA 94107</p>
+    <p><strong>Email:</strong> <a href="mailto:us-support@milaap.org">us-support@milaap.org</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+14152349800">+1 (415) 234-9800</a></p>
+  </div>
+
+  <!-- Singapore Info -->
+  <div class="info" id="singapore" style="display: none;">
+    <p><strong>Milaap Singapore Office</strong></p>
+    <p>1 North Bridge Road, High Street Centre, Singapore 179094</p>
+    <p><strong>Email:</strong> <a href="mailto:sg-support@milaap.org">sg-support@milaap.org</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+6591234567">+65 9123 4567</a></p>
+  </div>
+</div>
+
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.login-dropdown button')) {
+        const dropdown = document.getElementById("dropdown");
+        if (dropdown && dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        }
+      }
+    }
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    const infos = document.querySelectorAll('.info');
+
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    infos.forEach(info => {
+      info.style.display = 'none';
+    });
+
+    document.getElementById(tabId).style.display = 'block';
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>

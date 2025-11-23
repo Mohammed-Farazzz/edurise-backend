@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milaap Pricing</title>
+  <link rel="stylesheet" href="price.css" />
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://as2.ftcdn.net/v2/jpg/01/99/05/35/1000_F_199053513_reNOz8CqNJx2zBxbhOUCTDpjcl3tb7CI.jpg" alt="EduRise Logo" style="height: 35px; vertical-align: middle;">
+      <span style="font-weight: bold; font-size: 20px; margin-left: 10px; color: #a60059;">EduRise</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="code-of-practice.html">Code of Practice</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="login-dropdown">
+      <button onclick="toggleDropdown()">Login ⯆</button>
+      <div class="dropdown-content" id="dropdown">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <img src="https://images.indianexpress.com/2019/12/student-759-1.jpg" alt="Helping People" />
+    </div>
+    <div class="hero-right">
+      <h2>FREE FUNDRAISING FOR ALL!</h2>
+      <h1>0 % <span>PLATFORM FEES</span></h1>
+      <p>RAISE MAXIMUM FUNDS FOR THE CAUSE YOU<br />CARE ABOUT</p>
+      <button class="hero-btn">Start a fundraiser</button>
+    </div>
+  </section>
+
+  <section class="calculator">
+    <h2>Fundraiser goal calculator</h2>
+    <p>A simple way to plan and achieve your fundraiser goal</p>
+  </section>
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("dropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  // Hide dropdown when clicking outside
+  window.onclick = function(event) {
+    if (!event.target.matches('.login-dropdown button')) {
+      const dropdown = document.getElementById("dropdown");
+      if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  }
+<footer class="footer">
+    <p>© 2025 EduRise Donation Portal. All rights reserved.</p>
+  </footer>
+</script>
+
+</body>
+</html>

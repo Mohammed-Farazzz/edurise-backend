@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code of Practice - EduRise</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://as2.ftcdn.net/v2/jpg/01/99/05/35/1000_F_199053513_reNOz8CqNJx2zBxbhOUCTDpjcl3tb7CI.jpg" alt="EduRise Logo" style="height: 35px; vertical-align: middle;">
+        <span style="font-weight: bold; font-size: 20px; margin-left: 10px; color: #a60059;">EduRise</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="code-of-practice.html">Code of Practice</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="login-dropdown">
+        <button onclick="toggleDropdown()">Login ⯆</button>
+        <div class="dropdown-content" id="dropdown">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Code of Practice Section -->
+  <section class="code-container">
+    <h1>Our Commitment to Ethical Fundraising</h1>
+    <p>
+      In 2014, we witnessed a quiet shift in how people turned to their communities for help.
+      As crowdfunding has grown, so too have the ethical questions around how we tell these stories.
+      As a platform we are committed towards the following
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">👤</div>
+        <h3>Dignified Storytelling</h3>
+        <p>Uphold the dignity of the individuals and families whose stories are shared</p>
+      </div>
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>Voluntary Giving</h3>
+        <p>Avoid inducing guilt or shame in donors—the choice to give must always remain voluntary and respected</p>
+      </div>
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>Transparent Communication</h3>
+        <p>Ensure donors are provided with clear, complete, and respectful information to make informed decisions</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.login-dropdown button')) {
+        const dropdown = document.getElementById("dropdown");
+        if (dropdown && dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

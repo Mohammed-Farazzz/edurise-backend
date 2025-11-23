@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate - EduRise</title>
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    .donate-hero {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .donate-hero h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .donate-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 30px;
+    }
+
+    .donate-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .donate-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .donate-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .donate-content {
+      padding: 15px;
+    }
+
+    .donate-content h4 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .donate-content .amount {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .donate-content .progress {
+      margin: 8px 0;
+      color: green;
+      font-weight: 500;
+    }
+
+    .donate-content button {
+      background-color: #a60059;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .donate-content button:hover {
+      background-color: #880045;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://as2.ftcdn.net/v2/jpg/01/99/05/35/1000_F_199053513_reNOz8CqNJx2zBxbhOUCTDpjcl3tb7CI.jpg" alt="EduRise Logo" style="height: 35px; vertical-align: middle;">
+        <span style="font-weight: bold; font-size: 20px; margin-left: 10px; color: #a60059;">EduRise</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="donate.html" class="active">Donate</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="code-of-practice.html">Code of Practice</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="login-dropdown">
+        <button onclick="toggleDropdown()">Login ⯆</button>
+        <div class="dropdown-content" id="dropdown">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="donate-hero">
+    <h2>Thousands are crowdfunding for various causes.</h2>
+    <p>Support a fundraiser today.</p>
+  </section>
+
+  <!-- Donation Cards -->
+  <section class="donate-grid">
+    <!-- Card 1 -->
+    <div class="donate-card">
+      <img src="https://images.indianexpress.com/2019/12/student-759-1.jpg" alt="Student 1">
+      <div class="donate-content">
+        <h4>Help Aditi complete her studies</h4>
+        <p class="progress">Raised ₹38,000 / ₹50,000</p>
+        <p class="amount">Created by: Ramesh Kumar</p>
+        <button onclick="location.href='register.html'">Donate</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="donate-card">
+      <img src="https://img.freepik.com/premium-photo/young-indian-boy-primary-school-wearing-his-school-uniform-smile-carries-his-backpack_1037914-132.jpg" alt="Student 2">
+      <div class="donate-content">
+        <h4>Support Raman's School Fund</h4>
+        <p class="progress">Raised ₹61,000 / ₹61,000</p>
+        <p class="amount">Created by: Nazmin Bano</p>
+        <button onclick="location.href='register.html'">Donate</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="donate-card">
+      <img src="https://img.freepik.com/premium-photo/cute-indian-little-school-boy-uniform_601128-4671.jpg?w=2000" alt="Student 3">
+      <div class="donate-content">
+        <h4>Help Ravi with Uniform & Books</h4>
+        <p class="progress">Raised ₹12,000 / ₹25,000</p>
+        <p class="amount">Created by: Neha Sharma</p>
+        <button onclick="location.href='register.html'">Donate</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.login-dropdown button')) {
+        const dropdown = document.getElementById("dropdown");
+        if (dropdown && dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

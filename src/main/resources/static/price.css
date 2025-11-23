@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: white;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8b1c42;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+nav ul li.active a {
+  border-bottom: 3px solid #8b1c42;
+  color: #8b1c42;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.start-btn {
+  background-color: #8b1c42;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.profile-icon {
+  font-size: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8b1c42;
+  padding: 60px 40px;
+  color: white;
+  align-items: center;
+}
+
+.hero-left img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero-right {
+  max-width: 500px;
+}
+
+.hero-right h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.hero-right h1 {
+  font-size: 50px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.hero-right h1 span {
+  font-size: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.hero-right p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.hero-btn {
+  background-color: white;
+  color: #8b1c42;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.calculator {
+  padding: 40px;
+  text-align: center;
+}
+
+.calculator h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.calculator p {
+  font-size: 18px;
+  color: #333;
+}
+.login-dropdown {
+  position: relative;
+}
+
+.login-dropdown button {
+  background-color: #8b1c42;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
